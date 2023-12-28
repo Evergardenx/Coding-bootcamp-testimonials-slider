@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: url(./images/pattern-bg.svg), url(./images/pattern-quotes.svg),
+  url(./images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-position: 92% 0%, 30% 25%, bottom left;
+}
+
+.hide{
+  display: none !important;
+}
+
+.container{
+  max-width: 80vw;
+}
+
+.tanya, .john{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container p{
+  font-size: 1.4rem;
+  font-weight: 300;
+  color:hsl(240, 38%, 20%);
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container .name{
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: hsl(240, 38%, 20%);
+}
+
+.container .title{
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: hsl(240, 18%, 77%);
+}
+
+.image__container{
+  position: relative;
+}
+
+.image__container img{
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.image__container .nav_buttons{
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  right: 350px;
+  bottom: -15px;
+  display: flex;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 1px 8px 10px rgba(0, 0, 0, 0.4);
+}
+
+.nav_buttons .prev__button{
+  background: url('./images/icon-prev.svg') no-repeat;
+  background-size: 30%;
+  background-position: center;
+  width: 50%;
+  border: none;
+  outline: none;
+  border-radius: 30px 0 0 30px;
+  z-index: 4;
+}
+
+.nav_buttons .next__button{
+  background: url('./images/icon-next.svg') no-repeat;
+  background-size: 30%;
+  background-position: center;
+  width: 50%;
+  border: none;
+  outline: none;
+  border-radius: 30px 0 0 30px;
+  z-index: 4;
+}
+
+@media screen and (max-width: 768px) {
+  body{
+    background: url(./images/pattern-bg.svg), url(./images/pattern-quotes.svg),url(./images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-size: 80%, 20%, 80%;
+    background-position: 62% 18%, 45% 58%, bottom left;
+  }
+  .tanya, .john{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .image__container img{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+  }
+  .container p{
+    margin-top: 4.5rem;
+    font-size: 1.2rem;
+  }
+  .container .name{
+    font-size: 1rem;
+  }
+  
+  .container .title{
+    font-size: 1.1rem;
+  }
+
+  .image__container .nav_buttons{
+    position: absolute;
+    height: 40px;
+    width: 70px;
+    top:230px;
+    right:90px;
+    display: flex;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 1px 8px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .name-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
